@@ -1,0 +1,27 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Directory listing for <%= sub_path %></h1>
+    <h2>Directories</h2>
+    <ul style="font-family: monospace"> 
+      <% dirs.each do |dir| %>
+        <li>
+          <a href="<%= File.join(sub_path, url_encode(dir)) %>"><%= dir %></a>
+        </li>
+      <% end %>
+    </ul>
+    <h2>Files</h2>
+    <ul style="font-family: monospace"> 
+      <% files.each do |file| %>
+        <li>
+          <% begin %>
+            <a href="<%= File.join(sub_path, url_encode(file)) %>"><%= file %> (<%= File.size(File.join(base_dir, file)) %>)</a>
+          <% rescue StandardError => e %>
+            Error processing <%= file %>: <%= e.to_s %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </body>
+</html>

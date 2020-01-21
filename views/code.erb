@@ -1,0 +1,15 @@
+<html style="margin: 0">
+  <head>
+    <link rel="stylesheet" href="/highlight.css" type="text/css" />
+  </head>
+  <body style="margin: 0; padding: 1">
+    <div style="position: sticky; top: 0; background-color: white">
+      <a href="<%= menu_data[:previous] %>" alt="previous file">&lt;</a>&nbsp;
+      <a href="<%= menu_data[:parent] %>" alt="parent directory">^</a>&nbsp;
+      <a href="<%= menu_data[:next] %>" alt="next file">&gt;</a>&nbsp;
+      <a href="?show_diff=true" alt="diff with previous version">diff</a>&nbsp;
+      <a href="?raw=true" alt="show raw version of the file">raw</a>
+    </div>
+    <%= code %>
+  </body>
+</html>

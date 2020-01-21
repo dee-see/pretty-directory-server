@@ -1,0 +1,12 @@
+inherit_gem:
+  gitlab-styles:
+    - rubocop-default.yml
+
+AllCops:
+  TargetRubyVersion: 2.6
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
