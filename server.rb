@@ -89,7 +89,7 @@ get '/*' do |sub_path|
 
   if File.directory?(path)
     files, dirs = split_entries(path)
-    erb :directory_listing, locals: { sub_path: request.path_info, base_dir: settings.directory, files: files, dirs: dirs }
+    erb :directory_listing, locals: { sub_path: request.path_info, base_dir: root, files: files, dirs: dirs }
   elsif File.exist?(path)
     parent = File.dirname(path)
     relative_parent = parent.gsub(root, '')
