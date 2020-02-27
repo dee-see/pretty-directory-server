@@ -1,10 +1,11 @@
 <html>
   <head>
+		<link rel="stylesheet" href="/styles.css" type="text/css" />
   </head>
-  <body>
+  <body id="recon-script">
     <h1>Directory listing for <%= sub_path %></h1>
     <h2>Directories</h2>
-    <ul style="font-family: monospace"> 
+    <ul class="file-list" style="font-family: monospace"> 
       <% dirs.each do |dir| %>
         <li>
           <a href="<%= File.join(sub_path, url_encode(dir)) %>"><%= dir %></a>
@@ -12,7 +13,7 @@
       <% end %>
     </ul>
     <h2>Files</h2>
-    <ul style="font-family: monospace"> 
+    <ul class="file-list" style="font-family: monospace"> 
       <% files.each do |file| %>
         <li>
           <% begin %>
