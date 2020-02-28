@@ -16,6 +16,10 @@ h2 {
     padding: 1em;
 }
 
+a {
+    color: #ff7800;
+}
+
 #sticky-header > a:hover {
     color: #ff5f5f;
 }
@@ -38,7 +42,6 @@ h2 {
 }
 
 .file-list > li > a {
-    color: #ff7800;
     text-decoration: none;
 }
 
