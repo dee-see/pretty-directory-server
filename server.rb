@@ -115,7 +115,7 @@ get '/*' do |sub_path|
       ext = File.extname(path).downcase
       case ext
       when '.md'
-        markdown File.read(path)
+        erb :code, locals: { code: markdown(File.read(path)), menu_data: menu_data }
       when '.rb'
         render_code_file(path, 'ruby', menu_data)
       when '.yml'
@@ -126,7 +126,7 @@ get '/*' do |sub_path|
         send_file path
       else
         begin
-          render_code_file(path, ext[1..-1] || 'txt', menu_data)
+          render_code_file(path, ext[1..-1] || 'plaintext', menu_data)
         rescue StandardError
           content_type 'text/plain'
           send_file path

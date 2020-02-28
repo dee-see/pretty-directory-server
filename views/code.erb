@@ -1,9 +1,9 @@
 <html style="margin: 0">
   <head>
     <link rel="stylesheet" href="/highlight.css" type="text/css" />
-		<link rel="stylesheet" href="/styles.css" type="text/css" />
+    <link rel="stylesheet" href="/styles.css" type="text/css" />
   </head>
-  <body style="margin: 0; padding: 1">
+  <body style="margin: 0">
     <div style="position: sticky; top: 0;" id="sticky-header">
       <a href="<%= menu_data[:previous] %>" alt="previous file">↩ </a>&nbsp;
       <a href="<%= menu_data[:parent] %>" alt="parent directory">⌂</a>&nbsp;
@@ -11,6 +11,8 @@
       <a href="?show_diff=true" alt="diff with previous version">diff</a>&nbsp;
       <a href="?raw=true" alt="show raw version of the file">raw</a>
     </div>
-    <%= code %>
+    <div class="content">
+      <%= code %>
+    </div>
   </body>
 </html>

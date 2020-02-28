@@ -1,75 +1,77 @@
 html {
-  background-color: #083c4a;
+    background-color: #083c4a;
 }
 
-h1 {
-  font-family: monospace;
-  color: #ff7800;
+body {
+    font-family: monospace;
+    color: #ff7800;
 }
+
 h2 {
-  font-family: monospace;
-  color: #c85400;
+    color: #c85400;
+}
+
+.content {
+    margin: 0.5em 0;
+    padding: 1em;
 }
 
 #sticky-header > a:hover {
-	color: #ff5f5f;
+    color: #ff5f5f;
 }
+
 #file-list > li {
-  list-style: none;
-  font-size: 18;
-  padding: 8px;
+    list-style: none;
+    font-size: 18;
+    padding: 8px;
 }
 
-#recon-script {
-  margin: 45px;
+#directory-listing {
+    margin: 45px;
 }
+
 .file-list > li {
-  margin: 15px;
-  font-size: 18px;
-  list-style: none;
-  color: black;
+    margin: 15px;
+    font-size: 18px;
+    list-style: none;
+    color: black;
 }
-
-/*.file-list > a {
-  color: black;
-}
-*/
 
 .file-list > li > a {
-  color: #ff7800;
-  text-decoration: none;
+    color: #ff7800;
+    text-decoration: none;
 }
 
 .file-list > li > a::before {
-  content: "›";
-  padding: 20px;
+    content: "›";
+    padding: 20px;
 }
 
 #sticky-header {
-	padding: 14px;
-	background: #00546a;
-	border-bottom-color: #005e77;
-	border-bottom-style: solid;
+    padding: 14px;
+    background: #00546a;
+    border-bottom-color: #005e77;
+    border-bottom-style: solid;
 }
 
 #sticky-header > a {
-	text-decoration: none;
-	color: #ff7800;
-	font-family: monospace;
-	font-size: 20px;
-	padding: 20px;
+    text-decoration: none;
+    color: #ff7800;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 20px;
 }
 
 /* we need the shadow to look more 1337 */
-
 div[class="highlight"] {
-  margin: 25px;
-  padding: 2%;
-  box-shadow: 10px 5px 5px black;
-  overflow-wrap: normal;
+    margin: 25px;
+    padding: 2%;
+    box-shadow: 10px 5px 5px black;
+    overflow-wrap: normal;
 }
+
 /* this is to style the code block - removes the run on code when it overflows */
 pre {
-  overflow-x: auto;
-  white-space: pre-wrap;
+    overflow-x: auto;
+    white-space: pre-wrap;
 }
